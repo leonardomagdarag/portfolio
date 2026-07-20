@@ -10,11 +10,20 @@ View your app in AI Studio: https://ai.studio/apps/d07b26b5-03ac-4563-92a7-ca8a9
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Run the app:
    `npm run dev`
+
+## Deploy to GitHub Pages
+
+1. Push this project to a GitHub repository.
+2. In GitHub, open the repository settings and enable GitHub Pages with the "GitHub Actions" source.
+3. The included workflow in [.github/workflows/deploy.yml](.github/workflows/deploy.yml) will build and publish the site whenever you push to the `main` branch.
+4. After the workflow finishes, your site will be available at:
+   `https://<your-username>.github.io/Portfolio-better/`
+
+If you want to deploy manually from your machine, run:
+`npm run build`
