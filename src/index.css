@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --color-background-val: #faf8f6;
+  --color-on-background-val: #1a1613;
+  --color-surface-val: #faf8f6;
+  --color-on-surface-val: #1a1613;
+  --color-on-surface-variant-val: #5c534c;
+  
+  --color-surface-container-val: #ffffff;
+  --color-surface-container-low-val: #f5f2ef;
+  --color-surface-container-high-val: #ebe6e1;
+  --color-surface-container-highest-val: #e0d8cf;
+  
+  --color-primary-val: #e67e22;
+  --color-primary-container-val: #ee671c;
+  --color-secondary-val: #a65315;
+  --color-tertiary-val: #5c5c5c;
+  --color-outline-variant-val: #d5cbc2;
+}
+
+.dark {
+  --color-background-val: #131313;
+  --color-on-background-val: #e5e2e1;
+  --color-surface-val: #131313;
+  --color-on-surface-val: #e5e2e1;
+  --color-on-surface-variant-val: #dcc1b1;
+  
+  --color-surface-container-val: #201f1f;
+  --color-surface-container-low-val: #1c1b1b;
+  --color-surface-container-high-val: #2a2a2a;
+  --color-surface-container-highest-val: #353534;
+  
+  --color-primary-val: #ffb783;
+  --color-primary-container-val: #e67e22;
+  --color-secondary-val: #ffb595;
+  --color-tertiary-val: #c8c6c5;
+  --color-outline-variant-val: #564337;
+}
+
+@theme {
+  --color-background: var(--color-background-val);
+  --color-on-background: var(--color-on-background-val);
+  --color-surface: var(--color-surface-val);
+  --color-on-surface: var(--color-on-surface-val);
+  --color-on-surface-variant: var(--color-on-surface-variant-val);
+  
+  --color-surface-container: var(--color-surface-container-val);
+  --color-surface-container-low: var(--color-surface-container-low-val);
+  --color-surface-container-high: var(--color-surface-container-high-val);
+  --color-surface-container-highest: var(--color-surface-container-highest-val);
+  
+  --color-primary: var(--color-primary-val);
+  --color-primary-container: var(--color-primary-container-val);
+  --color-secondary: var(--color-secondary-val);
+  --color-tertiary: var(--color-tertiary-val);
+  --color-tertiary-fixed-dim: var(--color-tertiary-val);
+  --color-outline-variant: var(--color-outline-variant-val);
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-headline-lg: "Montserrat", sans-serif;
+  --font-headline-xl: "Montserrat", sans-serif;
+  --font-headline-md: "Montserrat", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-code-sm: "Geist", monospace;
+  --font-label-md: "Geist", sans-serif;
+}
+
+/* Global utility classes for smoother light-to-dark transition */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Make sure all children of body transition nicely too */
+body * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom visual styles from guidelines */
+.glass-panel {
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-surface {
+  background-color: var(--color-surface-container-val);
+  border: 1px solid var(--color-outline-variant-val);
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-surface:hover {
+  border-color: var(--color-primary-container-val);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 15px 0 rgba(230, 126, 34, 0.2);
+}

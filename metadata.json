@@ -1,0 +1,6 @@
+{
+  "name": "BSIT Student Portfolio",
+  "description": "A clean, modern, and highly interactive academic and software engineering portfolio for an IT student.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
