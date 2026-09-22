@@ -1,104 +1,138 @@
 @import "tailwindcss";
 
+/* ─── Design Token Definitions ─────────────────────────────────────────────
+   Light mode (default) and dark mode CSS custom property values.
+   These feed into the @theme block so Tailwind can use them as utility classes.
+   ─────────────────────────────────────────────────────────────────────────── */
 :root {
-  --color-background-val: #faf8f6;
+  --color-background-val: #f8f6f3;
   --color-on-background-val: #1a1613;
-  --color-surface-val: #faf8f6;
+  --color-surface-val: #f8f6f3;
   --color-on-surface-val: #1a1613;
   --color-on-surface-variant-val: #5c534c;
-  
+
   --color-surface-container-val: #ffffff;
-  --color-surface-container-low-val: #f5f2ef;
-  --color-surface-container-high-val: #ebe6e1;
-  --color-surface-container-highest-val: #e0d8cf;
-  
-  --color-primary-val: #e67e22;
-  --color-primary-container-val: #ee671c;
+  --color-surface-container-low-val: #f2ede8;
+  --color-surface-container-high-val: #e8e1d9;
+  --color-surface-container-highest-val: #ddd4c9;
+
+  --color-primary-val: #c96a16;
+  --color-primary-container-val: #d9762a;
   --color-secondary-val: #a65315;
-  --color-tertiary-val: #5c5c5c;
-  --color-outline-variant-val: #d5cbc2;
+  --color-tertiary-val: #6b6560;
+  --color-outline-variant-val: #cec5bb;
 }
 
+/* Dark mode overrides — applied when <html> has class="dark" */
 .dark {
-  --color-background-val: #131313;
-  --color-on-background-val: #e5e2e1;
-  --color-surface-val: #131313;
-  --color-on-surface-val: #e5e2e1;
-  --color-on-surface-variant-val: #dcc1b1;
-  
-  --color-surface-container-val: #201f1f;
-  --color-surface-container-low-val: #1c1b1b;
-  --color-surface-container-high-val: #2a2a2a;
-  --color-surface-container-highest-val: #353534;
-  
-  --color-primary-val: #ffb783;
-  --color-primary-container-val: #e67e22;
-  --color-secondary-val: #ffb595;
-  --color-tertiary-val: #c8c6c5;
-  --color-outline-variant-val: #564337;
+  --color-background-val: #111110;
+  --color-on-background-val: #e8e4e1;
+  --color-surface-val: #111110;
+  --color-on-surface-val: #e8e4e1;
+  --color-on-surface-variant-val: #b8a89a;
+
+  --color-surface-container-val: #1e1d1c;
+  --color-surface-container-low-val: #191818;
+  --color-surface-container-high-val: #282725;
+  --color-surface-container-highest-val: #333230;
+
+  --color-primary-val: #f0a46a;
+  --color-primary-container-val: #d9762a;
+  --color-secondary-val: #f0a46a;
+  --color-tertiary-val: #b0aaa4;
+  --color-outline-variant-val: #4a3a2e;
 }
 
+/* ─── Tailwind Theme Registration ───────────────────────────────────────────
+   Maps CSS custom properties into Tailwind color and font utilities.
+   ─────────────────────────────────────────────────────────────────────────── */
 @theme {
   --color-background: var(--color-background-val);
   --color-on-background: var(--color-on-background-val);
   --color-surface: var(--color-surface-val);
   --color-on-surface: var(--color-on-surface-val);
   --color-on-surface-variant: var(--color-on-surface-variant-val);
-  
+
   --color-surface-container: var(--color-surface-container-val);
   --color-surface-container-low: var(--color-surface-container-low-val);
   --color-surface-container-high: var(--color-surface-container-high-val);
   --color-surface-container-highest: var(--color-surface-container-highest-val);
-  
+
   --color-primary: var(--color-primary-val);
   --color-primary-container: var(--color-primary-container-val);
   --color-secondary: var(--color-secondary-val);
   --color-tertiary: var(--color-tertiary-val);
   --color-tertiary-fixed-dim: var(--color-tertiary-val);
   --color-outline-variant: var(--color-outline-variant-val);
-  
+
+  /* Body/UI text */
   --font-sans: "Inter", system-ui, sans-serif;
-  --font-headline-lg: "Montserrat", sans-serif;
+  /* Display/heading text */
   --font-headline-xl: "Montserrat", sans-serif;
+  --font-headline-lg: "Montserrat", sans-serif;
   --font-headline-md: "Montserrat", sans-serif;
+  /* Content prose */
   --font-body-lg: "Inter", sans-serif;
   --font-body-md: "Inter", sans-serif;
-  --font-code-sm: "Geist", monospace;
-  --font-label-md: "Geist", sans-serif;
+  /* Monospaced code labels */
+  --font-code-sm: "Geist Mono", monospace;
+  --font-label-md: "Inter", sans-serif;
 }
 
-/* Global utility classes for smoother light-to-dark transition */
-body {
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Make sure all children of body transition nicely too */
-body * {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
-}
-
+/* ─── Global Base Styles ────────────────────────────────────────────────────
+   Only smooth-scroll and theme-colour transitions on the root. Avoid blanket
+   transitions on `body *` — that causes unwanted animation on every element
+   (including layout shifts) and hurts performance.
+   ─────────────────────────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
+  /* Prevents white flash before JS applies dark class */
+  background-color: #111110;
 }
 
-/* Custom visual styles from guidelines */
-.glass-panel {
-  background: rgba(30, 30, 30, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+body {
+  /* Theme colour transition — colours only, not transform/layout props */
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+/* ─── Component Utilities ───────────────────────────────────────────────────
+   Small reusable helpers that complement Tailwind utilities.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* Card surface — standard bordered card with theme-aware colours */
 .card-surface {
   background-color: var(--color-surface-container-val);
   border: 1px solid var(--color-outline-variant-val);
-  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card-surface:hover {
   border-color: var(--color-primary-container-val);
+  box-shadow: 0 4px 20px 0 rgba(217, 118, 42, 0.08);
 }
 
+/* Focus ring — keyboard focus indicator for interactive elements */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-primary-container-val);
+  outline-offset: 2px;
+}
+
+/* Subtle orange glow on hover for interactive cards */
 .glow-hover:hover {
-  box-shadow: 0 0 15px 0 rgba(230, 126, 34, 0.2);
+  box-shadow: 0 0 20px 0 rgba(217, 118, 42, 0.15);
+}
+
+/* ─── Responsive Motion Preferences ────────────────────────────────────────
+   Respect the OS-level "reduce motion" setting. Framer Motion also reads this
+   automatically, but this CSS fallback handles non-JS cases.
+   ─────────────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
