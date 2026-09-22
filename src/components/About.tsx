@@ -18,13 +18,18 @@ export default function About() {
   };
 
   const languages = [
-    { name: 'JavaScript / TS', level: '90%' },
-    { name: 'Python', level: '80%' },
-    { name: 'Java', level: '75%' },
+    { name: 'PHP', level: '95%' },
+    { name: 'JavaScript', level: '90%' },
+    { name: 'Java', level: '85%' },
+    { name: 'C / C++', level: '80%' },
+    { name: 'Python', level: '75%' },
+    { name: 'C#', level: '70%' },
+    { name: 'Visual Basic', level: '60%' },
+    { name: 'COBOL', level: '45%' },
   ];
 
-  const dataSystems = ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis'];
-  const devTools = ['Docker', 'AWS (Basic)', 'Figma', 'Linux CLI'];
+  const dataSystems = ['MySQL', 'SQLite', 'MongoDB', 'PostgreSQL'];
+  const devTools = ['Laravel', 'Node.js', 'React', 'Express', 'Livewire', 'Spring Boot'];
 
   const courseWorks = [
     'Data Structures & Algorithms',
@@ -53,7 +58,7 @@ export default function About() {
           </h1>
           
           <p className="font-body-lg text-base md:text-lg text-on-surface-variant leading-relaxed">
-            I am a Bachelor of Science in Information Technology student with an unrelenting passion for problem-solving. My focus lies in bridging the gap between complex technical requirements and elegant, scalable software solutions. I thrive in environments that challenge my analytical thinking and demand continuous learning.
+            I am a Bachelor of Science in Information Technology student with an unrelenting passion for problem-solving. My focus lies in bridging the gap between complex technical requirements and elegant, scalable software solutions. I thrive in environments that challenge my analytical thinking and I continue learning to stay aligned with modern tech trends.
           </p>
           
           <div className="mt-4">
@@ -95,36 +100,34 @@ export default function About() {
           Technical Arsenal
         </motion.h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Languages proficiency meters */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Languages proficiency meters — tall left column */}
           <motion.div 
             variants={itemVariants}
-            className="bg-surface-container border border-outline-variant/30 rounded-xl p-8 hover:border-primary-container/50 transition-colors duration-300 group flex flex-col justify-between relative overflow-hidden"
+            className="bg-surface-container border border-outline-variant/30 rounded-xl p-8 hover:border-primary-container/50 transition-colors duration-300 group relative overflow-hidden md:row-span-2"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 blur-3xl -z-10"></div>
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="material-symbols-outlined text-primary-container text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>code</span>
-                <h3 className="font-headline-md text-xl font-bold text-on-background">Languages</h3>
-              </div>
-              <div className="flex flex-col gap-5 mt-auto">
-                {languages.map((lang, index) => (
-                  <div key={lang.name} className="space-y-1">
-                    <div className="flex justify-between font-label-md text-xs font-semibold text-on-surface-variant">
-                      <span>{lang.name}</span>
-                      <span>{lang.level}</span>
-                    </div>
-                    <div className="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
-                      <motion.div 
-                        initial={{ width: 0 }}
-                        animate={{ width: lang.level }}
-                        transition={{ delay: 0.3 + index * 0.1, duration: 1, ease: 'easeOut' }}
-                        className="bg-primary-container h-1.5 rounded-full"
-                      />
-                    </div>
+            <div className="flex items-center gap-3 mb-6">
+              <span className="material-symbols-outlined text-primary-container text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>code</span>
+              <h3 className="font-headline-md text-xl font-bold text-on-background">Languages</h3>
+            </div>
+            <div className="flex flex-col gap-5">
+              {languages.map((lang, index) => (
+                <div key={lang.name} className="space-y-1">
+                  <div className="flex justify-between font-label-md text-xs font-semibold text-on-surface-variant">
+                    <span>{lang.name}</span>
+                    <span>{lang.level}</span>
                   </div>
-                ))}
-              </div>
+                  <div className="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+                    <motion.div 
+                      initial={{ width: 0 }}
+                      animate={{ width: lang.level }}
+                      transition={{ delay: 0.3 + index * 0.1, duration: 1, ease: 'easeOut' }}
+                      className="bg-primary-container h-1.5 rounded-full"
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </motion.div>
 
@@ -162,10 +165,10 @@ export default function About() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <span className="material-symbols-outlined text-primary-container text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>architecture</span>
-                <h3 className="font-headline-md text-xl font-bold text-on-background">DevOps &amp; Tools</h3>
+                <h3 className="font-headline-md text-xl font-bold text-on-background">Frameworks &amp; Tools</h3>
               </div>
               <p className="font-body-md text-sm text-on-surface-variant mb-6 leading-relaxed">
-                Proficient in modern development workflows, containerization, and interface design.
+                Building with modern backend and frontend frameworks while keeping up with current development practices.
               </p>
             </div>
             <div className="flex flex-wrap gap-2 mt-auto">
@@ -210,7 +213,7 @@ export default function About() {
                     Bachelor of Science in Information Technology
                   </h3>
                   <p className="font-body-md text-sm text-primary-container font-semibold mt-1">
-                    Tech University Institute
+                    Polytechnic University of the Philippines - Calauan Campus
                   </p>
                 </div>
                 <span className="font-label-md text-xs text-on-surface-variant bg-surface-container-high border border-outline-variant/20 px-3 py-1 rounded font-semibold whitespace-nowrap">
@@ -219,7 +222,7 @@ export default function About() {
               </div>
               
               <p className="font-body-md text-sm text-on-surface-variant mb-6 leading-relaxed">
-                Focusing on software engineering, database architecture, and network security. Consistently maintaining a high GPA while participating in algorithmic coding competitions and leading academic group projects.
+                Focusing on software engineering, database architecture, and continuous growth with modern development tools. Consistently maintaining a high GPA while participating in algorithmic coding competitions and leading academic group projects.
               </p>
               
               <div>
@@ -256,10 +259,10 @@ export default function About() {
                   <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary-container transition-colors mt-0.5">verified</span>
                   <div>
                     <h4 className="font-body-md text-sm font-semibold text-on-background group-hover:text-primary transition-colors">
-                      AWS Certified Cloud Practitioner
+                      MERN Stack Certification
                     </h4>
                     <p className="font-label-md text-xs text-on-surface-variant mt-1">
-                      Amazon Web Services · 2023
+                      Skill Wallet · In progress
                     </p>
                   </div>
                 </li>
@@ -267,10 +270,10 @@ export default function About() {
                   <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary-container transition-colors mt-0.5">verified</span>
                   <div>
                     <h4 className="font-body-md text-sm font-semibold text-on-background group-hover:text-primary transition-colors">
-                      JavaScript Algorithms and Data Structures
+                      MongoDB Certification
                     </h4>
                     <p className="font-label-md text-xs text-on-surface-variant mt-1">
-                      freeCodeCamp · 2022
+                      MongoDB · In progress
                     </p>
                   </div>
                 </li>

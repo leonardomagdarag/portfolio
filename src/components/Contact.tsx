@@ -89,6 +89,7 @@ export default function Contact() {
         // Send real email using EmailJS client-side SDK
         const templateParams = {
           from_name: formData.name,
+          to_email: 'leo.baluyot.magdarag039@gmail.com',
           reply_to: formData.email,
           subject: formData.subject || 'Portfolio Inquiry',
           message: formData.message,
@@ -328,7 +329,7 @@ export default function Contact() {
                         <>
                           <span className="material-symbols-outlined text-sm">send</span>
                           <span>
-                            {isEmailJSConfigured ? 'Transmit message via EmailJS' : 'Send Message'}
+                            {isEmailJSConfigured ? 'Send Message' : 'Send Message'}
                           </span>
                         </>
                       )}

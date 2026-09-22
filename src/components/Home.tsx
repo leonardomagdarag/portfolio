@@ -32,32 +32,32 @@ export default function Home({ onNavigate }: HomeProps) {
       <section className="flex flex-col items-center text-center py-12 md:py-20 min-h-[600px] justify-center relative overflow-hidden">
         {/* Ambient radial gradient background */}
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--color-surface-container-high)_0%,_var(--color-background)_70%)] opacity-70"></div>
-        
-        <motion.h1 
+
+        <motion.h1
           variants={itemVariants}
           className="font-headline-xl text-4xl md:text-5xl lg:text-6xl text-on-surface max-w-4xl mb-6 font-bold leading-tight tracking-tight"
         >
           Building Digital Solutions through <span className="text-primary">Code</span> and <span className="text-primary-container">Logic</span>
         </motion.h1>
-        
-        <motion.p 
+
+        <motion.p
           variants={itemVariants}
           className="font-body-lg text-lg text-on-surface-variant max-w-2xl mb-10 leading-relaxed"
         >
-          I engineer robust backends, design intuitive frontends, and configure reliable networks. Translating complex technical requirements into elegant, functional systems.
+          I engineer robust backends, design intuitive frontends, and keep learning the latest tools and trends. Translating complex technical requirements into elegant, functional systems.
         </motion.p>
-        
-        <motion.div 
+
+        <motion.div
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4"
         >
-          <button 
+          <button
             onClick={() => onNavigate('projects')}
             className="bg-primary-container text-white px-8 py-3 rounded font-label-md text-label-md hover:bg-primary-container/80 transition-all duration-300 active:scale-95 shadow-md shadow-primary-container/20 cursor-pointer text-center"
           >
             View My Work
           </button>
-          <button 
+          <button
             onClick={() => onNavigate('contact')}
             className="border border-primary-container text-primary-container px-8 py-3 rounded font-label-md text-label-md hover:bg-primary-container/10 transition-all duration-300 active:scale-95 cursor-pointer text-center"
           >
@@ -68,17 +68,17 @@ export default function Home({ onNavigate }: HomeProps) {
 
       {/* Core Competencies */}
       <section className="space-y-8">
-        <motion.h2 
+        <motion.h2
           variants={itemVariants}
           className="font-headline-md text-2xl text-on-surface flex items-center gap-4"
         >
           <span className="w-8 h-px bg-primary-container inline-block"></span>
           Core Competencies
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Web Development */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             whileHover={{ y: -8 }}
             className="card-surface p-8 rounded-xl flex flex-col items-start hover:border-primary transition-all duration-300 bg-surface-container"
@@ -93,12 +93,16 @@ export default function Home({ onNavigate }: HomeProps) {
             <div className="flex flex-wrap gap-2 mt-auto">
               <span className="bg-surface-container-high px-3 py-1 rounded font-code-sm text-xs text-tertiary">React</span>
               <span className="bg-surface-container-high px-3 py-1 rounded font-code-sm text-xs text-tertiary">Node.js</span>
-              <span className="bg-surface-container-high px-3 py-1 rounded font-code-sm text-xs text-tertiary">TypeScript</span>
+              <span className="bg-surface-container-high px-3 py-1 rounded font-code-sm text-xs text-tertiary">Laravel</span>
+              
+              <span className="bg-surface-container-high px-3 py-1 rounded font-code-sm text-xs text-tertiary">Spring Boot</span>
+              <span className="bg-surface-container-high px-3 py-1 rounded font-code-sm text-xs text-tertiary">Express</span>
+              <span className="bg-surface-container-high px-3 py-1 rounded font-code-sm text-xs text-tertiary">Livewire</span>
             </div>
           </motion.div>
 
           {/* Database Management */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             whileHover={{ y: -8 }}
             className="card-surface p-8 rounded-xl flex flex-col items-start hover:border-primary transition-all duration-300 bg-surface-container"
@@ -112,36 +116,31 @@ export default function Home({ onNavigate }: HomeProps) {
             </p>
             <div className="flex flex-wrap gap-2 mt-auto">
               <span className="bg-surface-container-high px-3 py-1 rounded font-code-sm text-xs text-tertiary">MySQL</span>
-              <span className="bg-surface-container-high px-3 py-1 rounded font-code-sm text-xs text-tertiary">PostgreSQL</span>
+              <span className="bg-surface-container-high px-3 py-1 rounded font-code-sm text-xs text-tertiary">SQLite</span>
               <span className="bg-surface-container-high px-3 py-1 rounded font-code-sm text-xs text-tertiary">MongoDB</span>
             </div>
           </motion.div>
 
-          {/* Networking & Systems */}
-          <motion.div 
+          {/* Learning & Growth */}
+          <motion.div
             variants={itemVariants}
             whileHover={{ y: -8 }}
             className="card-surface p-8 rounded-xl flex flex-col items-start hover:border-primary transition-all duration-300 bg-surface-container"
           >
             <div className="w-12 h-12 rounded bg-surface-container-low flex items-center justify-center mb-6 text-primary border border-outline-variant/20">
-              <span className="material-symbols-outlined font-semibold" style={{ fontVariationSettings: "'FILL' 1" }}>router</span>
+              <span className="material-symbols-outlined font-semibold" style={{ fontVariationSettings: "'FILL' 1" }}>school</span>
             </div>
-            <h3 className="font-headline-lg text-xl font-bold text-on-surface mb-4">Networking &amp; Systems</h3>
+            <h3 className="font-headline-lg text-xl font-bold text-on-surface mb-4">Learning &amp; Growth</h3>
             <p className="font-body-md text-on-surface-variant mb-6 leading-relaxed">
-              Configuring local area networks, understanding TCP/IP protocols, and basic Linux server administration.
+              Continuously learning new frameworks, keeping up with current development trends, and strengthening my practical software engineering skills.
             </p>
-            <div className="flex flex-wrap gap-2 mt-auto">
-              <span className="bg-surface-container-high px-3 py-1 rounded font-code-sm text-xs text-tertiary">Linux</span>
-              <span className="bg-surface-container-high px-3 py-1 rounded font-code-sm text-xs text-tertiary">Cisco</span>
-              <span className="bg-surface-container-high px-3 py-1 rounded font-code-sm text-xs text-tertiary">AWS (Basic)</span>
-            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Recent Projects */}
       <section className="space-y-8">
-        <motion.div 
+        <motion.div
           variants={itemVariants}
           className="flex justify-between items-end"
         >
@@ -149,7 +148,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <span className="w-8 h-px bg-primary-container inline-block"></span>
             Recent Projects
           </h2>
-          <button 
+          <button
             onClick={() => onNavigate('projects')}
             className="font-label-md text-primary hover:text-primary-container transition-colors flex items-center gap-1 text-sm font-medium cursor-pointer"
           >
@@ -157,89 +156,90 @@ export default function Home({ onNavigate }: HomeProps) {
           </button>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Project 1 (Large Card - spans 2 columns on md/lg) */}
-          <motion.div 
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Cooperative Management System (Capstone) */}
+          <motion.div
             variants={itemVariants}
-            className="card-surface rounded-xl overflow-hidden md:col-span-2 group relative min-h-[400px] flex flex-col justify-end"
+            className="card-surface rounded-xl overflow-hidden group relative min-h-[380px] flex flex-col justify-end"
           >
             <div className="absolute inset-0 bg-surface-container-high -z-10 overflow-hidden">
-              <img 
-                className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 scale-102 group-hover:scale-105" 
-                alt="Enterprise Inventory System Dashboard" 
+              <img
+                className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 scale-102 group-hover:scale-105"
+                alt="Cooperative Management System"
                 referrerPolicy="no-referrer"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxe6gZ6mdZ3B1XqPIU-IUhL6baM4S9zSAIdzf9qmXeTqU4oAqHA1GJTB7RgH8y1PSnQAl5hcMcrKsejOOkMMUzpN5HMcbm1KwGVRYXeEfFI1GbzWLcWhOf4UURnOX910CgCD6o2LzbSAGRxSGbcXULM9X37ou9GvqS0D8XRRbSWE0WBSjlp909pap1USf6UbtTkbLJaBtG6JNvsk85zeurDRYqvT22lG3jnNvc40a614p2DsuTZcMRVQ"
+                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent"></div>
             </div>
-            
-            <div className="p-8">
-              <div className="flex gap-2 mb-4">
-                <span className="bg-primary-container/20 text-primary border border-primary-container/30 px-3 py-1 rounded font-code-sm text-xs backdrop-blur-sm">React</span>
-                <span className="bg-primary-container/20 text-primary border border-primary-container/30 px-3 py-1 rounded font-code-sm text-xs backdrop-blur-sm">Node.js</span>
+
+            <div className="p-6">
+              <div className="flex gap-2 mb-3">
+                <span className="bg-primary-container/20 text-primary border border-primary-container/30 px-2 py-0.5 rounded font-code-sm text-xs backdrop-blur-sm">Laravel</span>
+                <span className="bg-primary-container/20 text-primary border border-primary-container/30 px-2 py-0.5 rounded font-code-sm text-xs backdrop-blur-sm">Livewire</span>
               </div>
-              <h3 className="font-headline-lg text-2xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">
-                Enterprise Inventory System
+              <h3 className="font-headline-md text-lg font-bold text-on-surface mb-1 group-hover:text-primary transition-colors">
+                Cooperative Management System
               </h3>
-              <p className="font-body-md text-on-surface-variant max-w-xl leading-relaxed">
-                A full-stack solution for managing stock levels, predicting order times, and generating analytical reports for warehouse management.
+              <p className="font-body-md text-on-surface-variant text-sm leading-relaxed line-clamp-3">
+                A comprehensive TALL stack web system for managing cooperative operations — officer administration, member financials, and loan processing. Built as my capstone project.
               </p>
             </div>
           </motion.div>
 
-          {/* Project 2 */}
-          <motion.div 
+          {/* OneFrend IMS */}
+          <motion.div
             variants={itemVariants}
-            className="card-surface rounded-xl overflow-hidden relative group min-h-[400px] flex flex-col justify-end"
+            className="card-surface rounded-xl overflow-hidden relative group min-h-[380px] flex flex-col justify-end"
           >
             <div className="absolute inset-0 bg-surface-container-high -z-10 overflow-hidden">
-              <img 
-                className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 scale-102 group-hover:scale-105" 
-                alt="Network Monitor Script topology illustration" 
+              <img
+                className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 scale-102 group-hover:scale-105"
+                alt="OneFrend Integrated Management System"
                 referrerPolicy="no-referrer"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXnelFFZ7_dEkM_dsZpxATvKH4CS2covu_AJeF6YNkzgwmk-1KXscW_4t158mfG5BhyOwjs4prWGjs-YpzayBWs85pLs_QIqhWQc-REzuARYslASZTwViIGuK45WgKtWYjaCubieADgGiwm8busRd10QGmUtrREjOdmuMtWlM9MZzZ9U2OalrxOTM4TpYLqXEdFJpvUNWl5ZWuaLGZh42x8ygCeKuMIZ16e1CpIg6Ff3dlgWGR9o1yAQ"
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
             </div>
 
             <div className="p-6">
               <div className="flex gap-2 mb-3">
-                <span className="bg-primary-container/20 text-primary border border-primary-container/30 px-2 py-0.5 rounded font-code-sm text-xs backdrop-blur-sm">Python</span>
+                <span className="bg-primary-container/20 text-primary border border-primary-container/30 px-2 py-0.5 rounded font-code-sm text-xs backdrop-blur-sm">Laravel</span>
+                <span className="bg-primary-container/20 text-primary border border-primary-container/30 px-2 py-0.5 rounded font-code-sm text-xs backdrop-blur-sm">Flutter</span>
               </div>
               <h3 className="font-headline-md text-lg font-bold text-on-surface mb-1 group-hover:text-primary transition-colors">
-                Network Monitor script
+                OneFrend IMS
               </h3>
               <p className="font-body-md text-on-surface-variant text-sm leading-relaxed line-clamp-3">
-                Automated latency testing and alert generation tool for small office networks.
+                Integrated management system with a Laravel web admin for HR, marketing, and operations, plus a Flutter mobile app for customer ordering and delivery tracking.
               </p>
             </div>
           </motion.div>
 
-          {/* Project 3 */}
-          <motion.div 
+          {/* PokeNexus */}
+          <motion.div
             variants={itemVariants}
-            className="card-surface rounded-xl overflow-hidden relative group min-h-[400px] flex flex-col justify-end md:col-span-2 lg:col-span-1"
+            className="card-surface rounded-xl overflow-hidden relative group min-h-[380px] flex flex-col justify-end"
           >
             <div className="absolute inset-0 bg-surface-container-high -z-10 overflow-hidden">
-              <img 
-                className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 scale-102 group-hover:scale-105" 
-                alt="Campus Task App UI design" 
+              <img
+                className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 scale-102 group-hover:scale-105"
+                alt="PokeNexus Pokedex Web App"
                 referrerPolicy="no-referrer"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ10a1Xshs5czGvHEGE9fbieb7rhHv2KrWd1F-5mGOZqAqDx4wmAAkLWLRkSgiFCi8n1SX2UmAjFRdBnPfVEG6AiseCsvpjKd8oE5xjiDMnqd1jU3KE1APfoHkisw0CMhsviqGCLIceluloPWUKCLjt27VIE0_0AKfmXSPR9XlW_5xaL4ioa7RAaBydq75duzXQJ-Rn63tsXezVV8WO_xJzeIZzl43VYFJLS6vVHg7rnjIlzVhdH8yMA"
+                src="https://images.unsplash.com/photo-1589241064278-1404bbc84f91?auto=format&fit=crop&w=800&q=80"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
             </div>
 
             <div className="p-6">
               <div className="flex gap-2 mb-3">
-                <span className="bg-primary-container/20 text-primary border border-primary-container/30 px-2 py-0.5 rounded font-code-sm text-xs backdrop-blur-sm">UI/UX</span>
-                <span className="bg-primary-container/20 text-primary border border-primary-container/30 px-2 py-0.5 rounded font-code-sm text-xs backdrop-blur-sm">Figma</span>
+                <span className="bg-primary-container/20 text-primary border border-primary-container/30 px-2 py-0.5 rounded font-code-sm text-xs backdrop-blur-sm">Laravel</span>
+                <span className="bg-primary-container/20 text-primary border border-primary-container/30 px-2 py-0.5 rounded font-code-sm text-xs backdrop-blur-sm">AJAX</span>
               </div>
               <h3 className="font-headline-md text-lg font-bold text-on-surface mb-1 group-hover:text-primary transition-colors">
-                Campus Task App
+                PokeNexus
               </h3>
               <p className="font-body-md text-on-surface-variant text-sm leading-relaxed line-clamp-3">
-                High-fidelity prototype for a student productivity application integrating academic calendars.
+                A Pokédex web app featuring creature collection, real-time trading, messaging, trainer profiles, and a gacha system.
               </p>
             </div>
           </motion.div>

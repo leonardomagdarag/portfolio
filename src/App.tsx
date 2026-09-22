@@ -44,58 +44,54 @@ export default function App() {
 
   return (
     <div className="bg-background text-on-background min-h-screen flex flex-col font-sans transition-colors duration-500">
-      
+
       {/* Fixed Header / TopNavBar */}
       <header className="bg-surface/80 backdrop-blur-xl border-b border-outline-variant/20 fixed top-0 w-full z-40 transition-colors">
         <div className="flex justify-between items-center max-w-[1200px] mx-auto px-6 lg:px-10 h-20">
-          
+
           {/* Logo */}
-          <div 
+          <div
             onClick={() => handleNavigate('home')}
             className="font-headline font-bold text-xl md:text-2xl text-primary cursor-pointer hover:opacity-80 transition-opacity select-none"
           >
-            IT Portfolio
+            Leonardo Magdarag
           </div>
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex gap-8 items-center font-label-md text-sm font-medium">
-            <button 
+            <button
               onClick={() => handleNavigate('home')}
-              className={`pb-1 border-b-2 transition-all duration-300 cursor-pointer ${
-                activeTab === 'home' 
-                  ? 'text-primary border-primary' 
+              className={`pb-1 border-b-2 transition-all duration-300 cursor-pointer ${activeTab === 'home'
+                  ? 'text-primary border-primary'
                   : 'text-on-surface-variant border-transparent hover:text-primary'
-              }`}
+                }`}
             >
               Home
             </button>
-            <button 
+            <button
               onClick={() => handleNavigate('projects')}
-              className={`pb-1 border-b-2 transition-all duration-300 cursor-pointer ${
-                activeTab === 'projects' 
-                  ? 'text-primary border-primary' 
+              className={`pb-1 border-b-2 transition-all duration-300 cursor-pointer ${activeTab === 'projects'
+                  ? 'text-primary border-primary'
                   : 'text-on-surface-variant border-transparent hover:text-primary'
-              }`}
+                }`}
             >
               Projects
             </button>
-            <button 
+            <button
               onClick={() => handleNavigate('about')}
-              className={`pb-1 border-b-2 transition-all duration-300 cursor-pointer ${
-                activeTab === 'about' 
-                  ? 'text-primary border-primary' 
+              className={`pb-1 border-b-2 transition-all duration-300 cursor-pointer ${activeTab === 'about'
+                  ? 'text-primary border-primary'
                   : 'text-on-surface-variant border-transparent hover:text-primary'
-              }`}
+                }`}
             >
               About
             </button>
-            <button 
+            <button
               onClick={() => handleNavigate('contact')}
-              className={`pb-1 border-b-2 transition-all duration-300 cursor-pointer ${
-                activeTab === 'contact' 
-                  ? 'text-primary border-primary' 
+              className={`pb-1 border-b-2 transition-all duration-300 cursor-pointer ${activeTab === 'contact'
+                  ? 'text-primary border-primary'
                   : 'text-on-surface-variant border-transparent hover:text-primary'
-              }`}
+                }`}
             >
               Contact
             </button>
@@ -103,7 +99,7 @@ export default function App() {
 
           {/* Action cluster: Theme switch + Resume */}
           <div className="hidden md:flex items-center gap-4">
-            
+
             {/* Theme switcher toggle button */}
             <button
               onClick={toggleTheme}
@@ -116,7 +112,7 @@ export default function App() {
             </button>
 
             {/* Resume trigger button */}
-            <button 
+            <button
               onClick={() => setIsResumeModalOpen(true)}
               className="font-label-md text-sm font-semibold bg-primary-container text-white px-5 py-2.5 rounded hover:bg-primary-container/80 transition-all duration-300 active:scale-95 shadow-sm cursor-pointer"
             >
@@ -135,8 +131,8 @@ export default function App() {
                 {isDarkMode ? 'light_mode' : 'dark_mode'}
               </span>
             </button>
-            
-            <button 
+
+            <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-on-surface-variant hover:text-primary p-2 cursor-pointer"
               aria-label="Toggle menu"
@@ -171,39 +167,35 @@ export default function App() {
               transition={{ type: 'tween', duration: 0.3 }}
               className="fixed right-0 top-0 bottom-0 w-64 bg-surface-container z-30 border-l border-outline-variant/30 flex flex-col p-6 pt-24 space-y-6 md:hidden"
             >
-              <button 
+              <button
                 onClick={() => { handleNavigate('home'); setIsMobileMenuOpen(false); }}
-                className={`text-left font-label-md text-base py-2 border-b border-outline-variant/10 ${
-                  activeTab === 'home' ? 'text-primary font-bold' : 'text-on-surface-variant'
-                }`}
+                className={`text-left font-label-md text-base py-2 border-b border-outline-variant/10 ${activeTab === 'home' ? 'text-primary font-bold' : 'text-on-surface-variant'
+                  }`}
               >
                 Home
               </button>
-              <button 
+              <button
                 onClick={() => { handleNavigate('projects'); setIsMobileMenuOpen(false); }}
-                className={`text-left font-label-md text-base py-2 border-b border-outline-variant/10 ${
-                  activeTab === 'projects' ? 'text-primary font-bold' : 'text-on-surface-variant'
-                }`}
+                className={`text-left font-label-md text-base py-2 border-b border-outline-variant/10 ${activeTab === 'projects' ? 'text-primary font-bold' : 'text-on-surface-variant'
+                  }`}
               >
                 Projects
               </button>
-              <button 
+              <button
                 onClick={() => { handleNavigate('about'); setIsMobileMenuOpen(false); }}
-                className={`text-left font-label-md text-base py-2 border-b border-outline-variant/10 ${
-                  activeTab === 'about' ? 'text-primary font-bold' : 'text-on-surface-variant'
-                }`}
+                className={`text-left font-label-md text-base py-2 border-b border-outline-variant/10 ${activeTab === 'about' ? 'text-primary font-bold' : 'text-on-surface-variant'
+                  }`}
               >
                 About
               </button>
-              <button 
+              <button
                 onClick={() => { handleNavigate('contact'); setIsMobileMenuOpen(false); }}
-                className={`text-left font-label-md text-base py-2 border-b border-outline-variant/10 ${
-                  activeTab === 'contact' ? 'text-primary font-bold' : 'text-on-surface-variant'
-                }`}
+                className={`text-left font-label-md text-base py-2 border-b border-outline-variant/10 ${activeTab === 'contact' ? 'text-primary font-bold' : 'text-on-surface-variant'
+                  }`}
               >
                 Contact
               </button>
-              <button 
+              <button
                 onClick={() => { setIsResumeModalOpen(true); setIsMobileMenuOpen(false); }}
                 className="font-label-md text-base font-semibold bg-primary-container text-white px-4 py-3 rounded text-center hover:bg-primary-container/85 transition-colors cursor-pointer"
               >
@@ -274,25 +266,25 @@ export default function App() {
           <div className="font-label-md text-xs md:text-sm text-on-surface-variant font-medium">
             © 2024 BSIT Student Portfolio. Designed by Stitch by Google. Built with precision.
           </div>
-          
+
           <nav className="flex gap-8 font-body-md text-xs md:text-sm text-on-surface-variant font-semibold">
-            <a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-primary transition-colors cursor-pointer"
             >
               GitHub
             </a>
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-primary transition-colors cursor-pointer"
             >
               LinkedIn
             </a>
-            <button 
+            <button
               onClick={() => alert('Vite + React development preview environment source verified.')}
               className="hover:text-primary transition-colors cursor-pointer bg-transparent border-none"
             >
@@ -334,7 +326,7 @@ export default function App() {
 
               {/* Printable sheet area */}
               <div className="space-y-8">
-                
+
                 {/* Header Profile section */}
                 <div className="border-b border-outline-variant/30 pb-6 text-center md:text-left space-y-2">
                   <h2 className="font-headline text-3xl font-bold text-on-surface">Leo B. Magdarag</h2>
@@ -348,10 +340,10 @@ export default function App() {
 
                 {/* Grid sections */}
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-                  
+
                   {/* Left Column (Education / Experience) */}
                   <div className="md:col-span-8 space-y-6">
-                    
+
                     {/* Academic Profile */}
                     <div className="space-y-4">
                       <h3 className="font-headline text-sm font-bold uppercase tracking-wider text-primary border-b border-outline-variant/20 pb-2">
@@ -359,14 +351,14 @@ export default function App() {
                       </h3>
                       <div className="space-y-1">
                         <div className="flex justify-between items-start font-body-md text-sm font-semibold text-on-surface">
-                          <span>Tech University Institute</span>
+                          <span>Polytechnic University of the Philippines - Calauan Campus</span>
                           <span className="text-xs text-on-surface-variant font-normal">2021 - Present</span>
                         </div>
                         <p className="font-body-md text-xs text-on-surface-variant">
                           Bachelor of Science in Information Technology
                         </p>
                         <p className="font-body-md text-xs text-on-surface-variant italic mt-1">
-                          Focus in Software Engineering, Database Systems, &amp; Routing/Switching protocols.
+                          Focus in Software Engineering, Database Systems, and continuous learning with modern development trends.
                         </p>
                       </div>
                     </div>
@@ -376,7 +368,7 @@ export default function App() {
                       <h3 className="font-headline text-sm font-bold uppercase tracking-wider text-primary border-b border-outline-variant/20 pb-2">
                         Academic Projects
                       </h3>
-                      
+
                       <div className="space-y-4">
                         <div className="space-y-1">
                           <h4 className="font-body-md text-sm font-semibold text-on-surface">
@@ -388,10 +380,10 @@ export default function App() {
                         </div>
                         <div className="space-y-1">
                           <h4 className="font-body-md text-sm font-semibold text-on-surface">
-                            Network Security Posture Audit
+                            Application Security Review
                           </h4>
                           <p className="font-body-md text-xs text-on-surface-variant leading-relaxed">
-                            Analyzed live subnet telemetry logs with Wireshark, isolated vulnerable IP ports, and generated highly-hardened firewall rulesets.
+                            Reviewed authentication flow, input handling, and access control to strengthen application-side security.
                           </p>
                         </div>
                       </div>
@@ -401,21 +393,29 @@ export default function App() {
 
                   {/* Right Column (Competency Matrix / Certifications) */}
                   <div className="md:col-span-4 space-y-6">
-                    
+
                     {/* Competencies */}
                     <div className="space-y-3">
                       <h3 className="font-headline text-sm font-bold uppercase tracking-wider text-primary border-b border-outline-variant/20 pb-2">
                         Technical Skillset
                       </h3>
                       <div className="flex flex-wrap gap-1.5">
+                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">PHP</span>
                         <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">JavaScript</span>
-                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">TypeScript</span>
+                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">Java</span>
+                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">C / C++</span>
                         <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">Python</span>
-                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">PostgreSQL</span>
+                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">C#</span>
                         <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">MySQL</span>
+                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">SQLite</span>
                         <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">MongoDB</span>
-                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">Cisco Networks</span>
-                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">Docker</span>
+                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">PostgreSQL</span>
+                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">Laravel</span>
+                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">Node.js</span>
+                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">React</span>
+                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">Express</span>
+                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">Livewire</span>
+                        <span className="px-2 py-1 bg-surface-container-low border border-outline-variant/20 rounded text-xs font-code-sm text-on-surface">Spring Boot</span>
                       </div>
                     </div>
 
