@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
 
 // ─── Animation Variants ───────────────────────────────────────────────────────
@@ -118,8 +117,6 @@ const coursework = [
 ];
 
 export default function About() {
-  const [imgSrc, setImgSrc] = useState('./profile_picture.png');
-
   return (
     <motion.div
       initial="hidden"
@@ -202,14 +199,9 @@ export default function About() {
           <div className="absolute inset-0 bg-primary-container/10 blur-3xl rounded-full -z-10" />
           <div className="overflow-hidden rounded-2xl border border-outline-variant/30 aspect-[3/4] bg-surface-container">
             <img
-              src={imgSrc}
+              src="./profile_picture.png"
               alt="Leo Magdarag"
               className="w-full h-full object-cover object-[55%_30%] hover:scale-105 transition-transform duration-700"
-              onError={() => {
-                setImgSrc(
-                  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=800&q=80'
-                );
-              }}
             />
           </div>
         </motion.div>

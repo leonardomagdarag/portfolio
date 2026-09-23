@@ -193,11 +193,6 @@ export default function Home({ onNavigate }: HomeProps) {
               src="./profile_picture.png"
               alt="Leo Magdarag"
               className="w-full h-full object-cover object-[55%_30%]"
-              onError={(e) => {
-                // Fallback if profile picture fails to load
-                (e.target as HTMLImageElement).src =
-                  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=800&q=80';
-              }}
             />
           </div>
         </motion.div>
