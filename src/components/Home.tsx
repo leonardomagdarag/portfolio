@@ -86,20 +86,13 @@ export default function Home({ onNavigate }: HomeProps) {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="space-y-28 px-5 lg:px-10 max-w-[1200px] mx-auto py-16 md:py-24"
+      className="space-y-28 px-5 lg:px-10 max-w-[1200px] mx-auto pb-16 md:pb-24"
     >
       {/* ── Hero Section ─────────────────────────────────────────────────────── */}
-      <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center min-h-[min(70vh,640px)]">
+      <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center min-h-[calc(100dvh-68px)]">
 
         {/* Left: Text content */}
         <div className="lg:col-span-7 flex flex-col gap-6">
-          {/* Availability badge */}
-          <motion.div variants={itemVariants}>
-            <span className="inline-flex items-center gap-2 text-xs font-semibold text-on-surface-variant bg-surface-container-high border border-outline-variant/30 px-3 py-1.5 rounded-full">
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" aria-hidden="true" />
-              Available for internships & opportunities
-            </span>
-          </motion.div>
 
           {/* Name + headline */}
           <motion.div variants={itemVariants} className="space-y-3">
