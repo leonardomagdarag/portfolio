@@ -289,7 +289,8 @@ export default function About() {
         className="grid grid-cols-1 lg:grid-cols-12 gap-6"
       >
         {/* Degree block */}
-        <motion.div variants={itemVariants} className="lg:col-span-8">
+        <div className="lg:col-span-8 space-y-6">
+        <motion.div variants={itemVariants}>
           <div className="h-full bg-surface-container border border-outline-variant/30 rounded-xl p-7 relative overflow-hidden group">
             {/* Accent left bar — changes colour on hover as a subtle interactive cue */}
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary-container/25 group-hover:bg-primary-container transition-colors duration-300" aria-hidden="true" />
@@ -332,8 +333,32 @@ export default function About() {
           </div>
         </motion.div>
 
+        {/* Senior High School block */}
+        <motion.div variants={itemVariants}>
+          <div className="h-full bg-surface-container border border-outline-variant/30 rounded-xl p-7 relative overflow-hidden group">
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary-container/25 group-hover:bg-primary-container transition-colors duration-300" aria-hidden="true" />
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+              <div>
+                <h2 className="font-headline-md text-lg font-bold text-on-surface">
+                  Senior High School — ICT Strand
+                </h2>
+                <p className="text-sm text-primary-container font-semibold mt-1">
+                  AMA Computer College Calamba
+                </p>
+              </div>
+              <span className="text-xs text-on-surface-variant bg-surface-container-high border border-outline-variant/20 px-3 py-1 rounded-full whitespace-nowrap">
+                2020 – 2021
+              </span>
+            </div>
+            <p className="text-sm text-on-surface-variant leading-relaxed mt-4">
+              Completed Senior High School under the Information and Communications Technology (ICT) strand.
+            </p>
+          </div>
+        </motion.div>
+        </div>
+
         {/* Certifications block */}
-        <motion.div variants={itemVariants} className="lg:col-span-4">
+        <motion.div variants={itemVariants} className="lg:col-span-4 h-full">
           <div className="h-full bg-surface-container border border-outline-variant/30 rounded-xl p-7">
             <h3 className="font-headline-md text-base font-bold text-on-surface mb-5 flex items-center gap-2">
               <span

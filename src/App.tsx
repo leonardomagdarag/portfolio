@@ -406,6 +406,15 @@ export default function App() {
                           Focus: Software Engineering, Database Systems, Web & Mobile Development
                         </p>
                       </div>
+                      <div className="pt-4 space-y-1">
+                        <div className="flex justify-between items-start gap-4">
+                          <span className="text-sm font-semibold text-on-surface leading-snug">
+                            AMA Computer College Calamba
+                          </span>
+                          <span className="text-xs text-on-surface-variant whitespace-nowrap">2020 – 2021</span>
+                        </div>
+                        <p className="text-xs text-on-surface-variant">Senior High School — ICT Strand</p>
+                      </div>
                     </div>
 
                     {/* Academic Projects */}
