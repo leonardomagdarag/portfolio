@@ -178,7 +178,7 @@ export default function About() {
             {[
               { label: 'University', value: 'PUP Calauan' },
               { label: 'Degree', value: 'BSIT' },
-              { label: 'Location', value: 'Philippines' },
+              { label: 'Location', value: 'Laguna, Philippines' },
             ].map((fact) => (
               <div key={fact.label} className="bg-surface-container-low border border-outline-variant/20 rounded-lg p-4">
                 <dt className="text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant mb-1">

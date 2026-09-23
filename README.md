@@ -51,5 +51,5 @@ src/
 
 ## Contact
 
-- **Email:** leo.baluyot.magdarag039@gmail.com
+- **Email:** leonardomagdarag@gmail.com
 - **GitHub:** [leonardomagdarag](https://github.com/leonardomagdarag)

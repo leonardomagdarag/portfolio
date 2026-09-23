@@ -154,7 +154,7 @@ export default function Home({ onNavigate }: HomeProps) {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/leonardomagdarag"
+              href="https://www.linkedin.com/in/leonardo-magdarag"
               target="_blank"
               rel="noopener noreferrer"
               className="text-on-surface-variant hover:text-primary-container transition-colors text-sm font-medium flex items-center gap-1.5 focus-ring rounded"
@@ -164,7 +164,7 @@ export default function Home({ onNavigate }: HomeProps) {
               LinkedIn
             </a>
             <a
-              href="mailto:leo.baluyot.magdarag039@gmail.com"
+              href="mailto:leonardomagdarag@gmail.com"
               className="text-on-surface-variant hover:text-primary-container transition-colors text-sm font-medium flex items-center gap-1.5 focus-ring rounded"
               aria-label="Email me"
             >

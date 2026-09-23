@@ -10,8 +10,8 @@ import Contact from './components/Contact';
 // both the navigation header, footer, and contact section.
 const SOCIAL_LINKS = {
   github: 'https://github.com/leonardomagdarag',
-  linkedin: 'https://linkedin.com/in/leonardomagdarag',
-  email: 'leo.baluyot.magdarag039@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/leonardo-magdarag',
+  email: 'leonardomagdarag@gmail.com',
 };
 
 // ─── Nav Items ────────────────────────────────────────────────────────────────
@@ -375,8 +375,8 @@ export default function App() {
                     Bachelor of Science in Information Technology
                   </p>
                   <p className="text-xs text-on-surface-variant mt-2 flex flex-wrap gap-x-4 gap-y-1">
-                    <span>Manila, Philippines</span>
-                    <span>leo.baluyot.magdarag039@gmail.com</span>
+                    <span>Laguna, Philippines</span>
+                    <span>leonardomagdarag@gmail.com</span>
                     <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                       github.com/leonardomagdarag
                     </a>

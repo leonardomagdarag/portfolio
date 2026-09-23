@@ -13,9 +13,9 @@ const PUBLIC_KEY = (import.meta as any).env?.VITE_EMAILJS_PUBLIC_KEY ?? '';
 const isEmailJSConfigured = Boolean(SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY);
 
 // ─── Contact Info ─────────────────────────────────────────────────────────────
-const EMAIL = 'leo.baluyot.magdarag039@gmail.com';
+const EMAIL = 'leonardomagdarag@gmail.com';
 const GITHUB_URL = 'https://github.com/leonardomagdarag';
-const LINKEDIN_URL = 'https://linkedin.com/in/leonardomagdarag';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/leonardo-magdarag';
 
 // ─── Animation Variants ───────────────────────────────────────────────────────
 const containerVariants = {
@@ -225,7 +225,7 @@ export default function Contact() {
                 <p className="text-sm font-semibold text-on-surface group-hover:text-primary-container transition-colors">
                   LinkedIn
                 </p>
-                <p className="text-xs text-on-surface-variant">linkedin.com/in/leonardomagdarag</p>
+                <p className="text-xs text-on-surface-variant">linkedin.com/in/leonardo-magdarag</p>
               </div>
               <span className="material-symbols-outlined text-on-surface-variant text-[16px] ml-auto" aria-hidden="true">
                 open_in_new
@@ -276,7 +276,7 @@ export default function Contact() {
                   Location
                 </p>
                 <p className="text-sm text-on-surface mt-0.5">
-                  Manila, Philippines <span className="text-on-surface-variant">(GMT+8)</span>
+                  Laguna, Philippines <span className="text-on-surface-variant">(GMT+8)</span>
                 </p>
               </div>
             </div>
